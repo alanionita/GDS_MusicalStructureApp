@@ -2,9 +2,11 @@
 <resources>
     // main_activity
     <dimen name="header_height">300dp</dimen>
-    <dimen name="header_margin">12dp</dimen>
+    <dimen name="header_margin">8dp</dimen>
     <dimen name="header_image_dimens">120dp</dimen>
 
     // general
-    <dimen name="header_font">18sp</dimen>
+    <dimen name="header_font">24sp</dimen>
+    <dimen name="episode_title_font">18sp</dimen>
+    <dimen name="episode_date_font">12sp</dimen>
 </resources>
