@@ -4,4 +4,9 @@
 
     // activity_main
     <string name="header_title">Title</string>
+
+    // episode_item_list
+    <string name="episode_title">Episode Title</string>
+    <string name="episode_date">Date</string>
+    <string name="episode_add_button">+</string>
 </resources>
