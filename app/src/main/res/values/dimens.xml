@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // main_activity
+    <dimen name="header_height">200dp</dimen>
+    <dimen name="header_margin">18dp</dimen>
+    <dimen name="header_image_dimens">130dp</dimen>
+</resources>
