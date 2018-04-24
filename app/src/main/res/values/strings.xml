@@ -1,3 +1,7 @@
 <resources>
+    // general
     <string name="app_name">Musical Structures</string>
+
+    // activity_main
+    <string name="header_title">Title</string>
 </resources>
