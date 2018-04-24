@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     // main_activity
-    <dimen name="header_height">200dp</dimen>
-    <dimen name="header_margin">18dp</dimen>
-    <dimen name="header_image_dimens">130dp</dimen>
+    <dimen name="header_height">300dp</dimen>
+    <dimen name="header_margin">12dp</dimen>
+    <dimen name="header_image_dimens">120dp</dimen>
+
+    // general
+    <dimen name="header_font">18sp</dimen>
 </resources>

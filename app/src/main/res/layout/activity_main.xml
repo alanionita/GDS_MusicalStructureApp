@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.android.musicalstructures.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/header_height"
+        android:layout_weight="1"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark">
         <TextView
             android:id="@+id/header_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/header_margin"
             android:text="@string/header_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/header_font"
             />
         <ImageView
             android:layout_marginBottom="@dimen/header_margin"
@@ -26,9 +31,12 @@
             />
     </LinearLayout>
     <ListView
+        android:id="@+id/list_episodes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        app:layout_constraintVertical_weight="0">
 
     </ListView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
