@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // TODO: add a "Details" screen of the currently playing song
+    // TODO: pass data from list view to NowPlaying screen
     // TODO: activities are linked via explicit intents
     // TODO: button behavior is determined by an OnClickListener in the Java code rather than by the android:onClick attribute in the XML Layout.
 
