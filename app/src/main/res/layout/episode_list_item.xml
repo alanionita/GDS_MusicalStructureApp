@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:text="@string/episode_date"/>
     </LinearLayout>
-    <android.support.v7.widget.AppCompatImageButton
+    <ImageButton
+        android:id="@+id/episode_list_play_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"

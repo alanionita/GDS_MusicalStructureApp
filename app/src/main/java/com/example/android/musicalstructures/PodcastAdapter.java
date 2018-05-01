@@ -1,19 +1,26 @@
 package com.example.android.musicalstructures;
 
 import android.content.Context;
+import android.content.Intent;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class PodcastAdapter extends ArrayAdapter<Podcast> {
+    private Context context;
+
     PodcastAdapter(Context context, ArrayList<Podcast> podcasts) {
         super(context, 0, podcasts);
+        this.context = context;
     }
 
     @NonNull
@@ -25,6 +32,15 @@ public class PodcastAdapter extends ArrayAdapter<Podcast> {
             customView = LayoutInflater.from(getContext()).inflate(
                     R.layout.episode_list_item, parent, false
             );
+            ImageButton episode_play_button = (ImageButton) customView.findViewById(R.id.episode_list_play_button);
+            episode_play_button.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    Intent nowPlayingSubviewIntent = new Intent(context.getApplicationContext(), NowPlaying.class);
+                    context.startActivity(nowPlayingSubviewIntent);
+                    Log.d("message", "it works");
+                }
+            });;
         }
 
         /**
