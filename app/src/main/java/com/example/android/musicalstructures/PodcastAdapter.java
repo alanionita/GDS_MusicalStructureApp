@@ -26,7 +26,16 @@ public class PodcastAdapter extends ArrayAdapter<Podcast> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        // Check if the existing view is being reused, otherwise inflate the view
+        /**
+         * Get {@link Podcast item} at this position in the list
+         */
+
+        final Podcast arrayListItem = getItem(position);
+
+        /**
+         * Check if the existing view is being reused, otherwise inflate the view
+         */
+
         View customView = convertView;
         if (customView == null) {
             customView = LayoutInflater.from(getContext()).inflate(
@@ -35,19 +44,16 @@ public class PodcastAdapter extends ArrayAdapter<Podcast> {
             ImageButton episode_play_button = (ImageButton) customView.findViewById(R.id.episode_list_play_button);
             episode_play_button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-
                     Intent nowPlayingSubviewIntent = new Intent(context.getApplicationContext(), NowPlaying.class);
+                    nowPlayingSubviewIntent.putExtra("name", arrayListItem.getEpisodeName());
+                    nowPlayingSubviewIntent.putExtra("date", arrayListItem.getEpisodeDate());
+                    nowPlayingSubviewIntent.putExtra("description", arrayListItem.getEpisodeDescription());
+                    nowPlayingSubviewIntent.putExtra("link", arrayListItem.getEpisodeAudioLink());
                     context.startActivity(nowPlayingSubviewIntent);
                     Log.d("message", "it works");
                 }
             });;
         }
-
-        /**
-         * Get {@link Podcast item} at this position in the list
-         */
-
-        Podcast arrayListItem = getItem(position);
 
         /**
          * Find the TextViews from the {@link episode_list_item.xml} layout
