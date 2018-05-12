@@ -3,35 +3,53 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_action_slide_down"/>
+
+    <ImageView
+        android:id="@+id/nowPlaying_podThumbnail"
+        android:layout_width="350dp"
+        android:layout_height="350dp" />
+
+    <SeekBar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Now Playing"
-        android:textSize="28dp"
-        android:layout_margin="28dp" />
+        android:layout_height="50dp" />
 
     <TextView
         android:id="@+id/now_playing_title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="28dp"
-        android:layout_margin="28dp" />
+        android:textSize="18dp" />
 
     <TextView
-        android:id="@+id/now_playing_date"
-        android:layout_width="match_parent"
+        android:id="@+id/now_playing_podTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:layout_margin="28dp" />
+        android:textSize="12dp"/>
 
-    <TextView
-        android:id="@+id/now_playing_description"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:layout_margin="28dp" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_replay"/>
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_action_play"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_forward"/>
+    </LinearLayout>
 
 </LinearLayout>
