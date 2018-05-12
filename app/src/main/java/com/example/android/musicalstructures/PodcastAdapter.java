@@ -49,6 +49,7 @@ public class PodcastAdapter extends ArrayAdapter<Podcast> {
                     nowPlayingSubviewIntent.putExtra("date", arrayListItem.getEpisodeDate());
                     nowPlayingSubviewIntent.putExtra("description", arrayListItem.getEpisodeDescription());
                     nowPlayingSubviewIntent.putExtra("link", arrayListItem.getEpisodeAudioLink());
+                    nowPlayingSubviewIntent.putExtra("podName", arrayListItem.getPodcastName());
                     context.startActivity(nowPlayingSubviewIntent);
                     Log.d("message", "it works");
                 }
