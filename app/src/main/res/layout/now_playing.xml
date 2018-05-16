@@ -7,30 +7,36 @@
     android:gravity="center_horizontal">
 
     <ImageButton
-        android:layout_width="70dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_action_slide_down"/>
+        android:layout_width="@dimen/back_button_width"
+        android:layout_height="@dimen/back_button_height"
+        android:background="@drawable/ic_action_slide_down" />
 
     <ImageView
         android:id="@+id/nowPlaying_podThumbnail"
-        android:layout_width="350dp"
-        android:layout_height="350dp" />
+        android:layout_width="@dimen/podcast_thumbnail"
+        android:layout_height="@dimen/podcast_thumbnail" />
 
     <SeekBar
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="@dimen/seekbar_height"
+        android:layout_margin="@dimen/layout_divider"/>/>
 
     <TextView
         android:id="@+id/now_playing_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp" />
+        android:textSize="@dimen/title_size"
+        android:layout_marginLeft="@dimen/layout_divider_large"
+        android:layout_marginRight="@dimen/layout_divider_large"
+        android:layout_marginBottom="@dimen/layout_divider"
+        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/now_playing_podTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12dp"/>
+        android:textSize="@dimen/text_size"
+        android:layout_margin="@dimen/layout_divider"/>/>
 
     <LinearLayout
         android:layout_gravity="center"
@@ -41,15 +47,22 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_replay"/>
+            android:background="@drawable/ic_action_replay"
+            android:layout_margin="@dimen/layout_divider"/>/>
         <ImageButton
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/ic_action_play"/>
+            android:layout_width="@dimen/play_button"
+            android:layout_height="@dimen/play_button"
+            android:background="@drawable/ic_action_play"
+            android:layout_marginRight="@dimen/layout_divider"
+            android:layout_marginTop="@dimen/layout_divider"
+            android:layout_marginBottom="@dimen/layout_divider"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_forward"/>
+            android:background="@drawable/ic_action_forward"
+            android:layout_marginRight="@dimen/layout_divider"
+            android:layout_marginTop="@dimen/layout_divider"
+            android:layout_marginBottom="@dimen/layout_divider"/>
     </LinearLayout>
 
 </LinearLayout>
