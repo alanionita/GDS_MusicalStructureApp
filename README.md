@@ -30,6 +30,10 @@ This project is about combining various ideas and skills we’ve been practicing
 * Creating OnClickListeners through Java code
 * using Intents to open new activities and move data through the app
 
+### Extra challenges
+
+* Heavy use of Material Design guidelines for theming and layout
+
 ### Requirements
 
 #### Design
