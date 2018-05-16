@@ -2,11 +2,12 @@
     // general
     <string name="app_name">Musical Structures</string>
 
-    // activity_main
-    <string name="header_title">Title</string>
+    // activity_main View
+    <string name="header_title">Podcast Title</string>
 
-    // episode_item_list
+    // episode_item_list View
     <string name="episode_title">Episode Title</string>
     <string name="episode_date">Date</string>
     <string name="episode_add_button">+</string>
+
 </resources>
