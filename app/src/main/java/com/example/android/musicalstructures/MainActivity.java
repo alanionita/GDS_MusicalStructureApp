@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -25,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
         TypedArray img = getResources().obtainTypedArray(R.array.pod_thumbnails);
         ImageView mainPodThumb = (ImageView) findViewById(R.id.main_podThuumbnail);
         mainPodThumb.setBackgroundResource(img.getResourceId(0, -1));
+
+        /**
+         * Find header_title and update it to the podcast name
+         * Temporary set to a static string, but in future will be populated from a list
+         * of podcasts
+         */
+
+        TextView podcastTitle = (TextView) findViewById(R.id.header_title);
+        podcastTitle.setText("Philosophise This!");
 
 
         // Define the podcasts content for the app as an ArrayList<Podcast>
