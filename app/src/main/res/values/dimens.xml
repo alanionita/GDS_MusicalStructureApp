@@ -7,12 +7,12 @@
 
     // general
     <dimen name="header_font">24sp</dimen>
-    <dimen name="episode_title_font">24sp</dimen>
+    <dimen name="episode_title_font">20sp</dimen>
     <dimen name="episode_date_font">16sp</dimen>
 
     // episode_list_item
     <dimen name="ep_list_item_padding">8dp</dimen>
-    <dimen name="ep_list_item_play_button">32dp</dimen>
+    <dimen name="ep_list_item_play_button">40dp</dimen>
 
     // now_playing
     <dimen name="back_button_width">72dp</dimen>
