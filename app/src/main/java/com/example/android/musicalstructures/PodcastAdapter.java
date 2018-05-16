@@ -31,27 +31,41 @@ public class PodcastAdapter extends ArrayAdapter<Podcast> {
          */
 
         final Podcast arrayListItem = getItem(position);
+        Log.i("podcast", arrayListItem.getEpisodeName());
 
         /**
          * Check if the existing view is being reused, otherwise inflate the view
          */
-
-        View customView = convertView;
-        if (customView == null) {
-            customView = LayoutInflater.from(getContext()).inflate(
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.episode_list_item, parent, false
             );
-            ImageButton episode_play_button = (ImageButton) customView.findViewById(R.id.episode_list_play_button);
+
+            /**
+             * Find the episode play button from the ListItem view
+             */
+
+            ImageButton episode_play_button = (ImageButton) convertView.findViewById(R.id.episode_list_play_button);
+
+            /**
+             * Set on click listener to the play button
+             */
             episode_play_button.setOnClickListener(new View.OnClickListener() {
+                /**
+                 *
+                 * OnClick uses the {@link Podcast arrayListItem} from the ArrayList
+                 * to start a {@link NowPlaying} activity using the content from the arrayListItem
+                 */
                 public void onClick(View v) {
-                    Intent nowPlayingSubviewIntent = new Intent(context.getApplicationContext(), NowPlaying.class);
-                    nowPlayingSubviewIntent.putExtra("name", arrayListItem.getEpisodeName());
-                    nowPlayingSubviewIntent.putExtra("date", arrayListItem.getEpisodeDate());
-                    nowPlayingSubviewIntent.putExtra("description", arrayListItem.getEpisodeDescription());
-                    nowPlayingSubviewIntent.putExtra("link", arrayListItem.getEpisodeAudioLink());
-                    nowPlayingSubviewIntent.putExtra("podName", arrayListItem.getPodcastName());
-                    context.startActivity(nowPlayingSubviewIntent);
-                    Log.d("message", "it works");
+                    getContext().startActivity(
+                            new Intent(context.getApplicationContext(), NowPlaying.class)
+                                    .putExtra("name", arrayListItem.getEpisodeName())
+                                    .putExtra("date", arrayListItem.getEpisodeDate())
+                                    .putExtra("description", arrayListItem.getEpisodeDescription())
+                                    .putExtra("link", arrayListItem.getEpisodeAudioLink())
+                                    .putExtra("podName", arrayListItem.getPodcastName())
+                    );
+
                 }
             });;
         }
@@ -61,8 +75,8 @@ public class PodcastAdapter extends ArrayAdapter<Podcast> {
          */
 
         //
-        TextView episodeName = (TextView) customView.findViewById(R.id.episode_title);
-        TextView episodeDate = (TextView) customView.findViewById(R.id.episode_date);
+        TextView episodeName = (TextView) convertView.findViewById(R.id.episode_title);
+        TextView episodeDate = (TextView) convertView.findViewById(R.id.episode_date);
 
         /*
             Set the values in the episode_list_item.xml to the values from the
@@ -75,7 +89,7 @@ public class PodcastAdapter extends ArrayAdapter<Podcast> {
         }
 
         // Return the updated episode_list_item.xml view to it can be included in the list view
-        return customView;
+        return convertView;
     }
 
 }
