@@ -34,6 +34,6 @@
         android:layout_width="@dimen/ep_list_item_play_button"
         android:layout_height="@dimen/ep_list_item_play_button"
         android:layout_weight="1"
-        android:background="@drawable/ic_play_arrow_black_24dp"
-        android:layout_marginRight="@dimen/layout_divider_large"/>
+        android:background="@drawable/ic_action_play_circle"
+        android:layout_marginRight="@dimen/layout_divider"/>
 </LinearLayout>
