@@ -3,6 +3,8 @@ package com.example.android.musicalstructures;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,6 +41,20 @@ public class NowPlaying extends AppCompatActivity {
             TextView nowPlayingPodTitle = findViewById(R.id.now_playing_podTitle);
             nowPlayingEpTitle.setText(episodeName);
             nowPlayingPodTitle.setText(podcastName);
+
+            /**
+             * Find the collapse button and add a click listener that returns the
+             * user to the list view
+             */
+
+            ImageButton collapseButton = (ImageButton) findViewById(R.id.now_playing_collapse_button);
+            collapseButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
+
 
         }
 }
