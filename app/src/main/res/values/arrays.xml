@@ -3,6 +3,4 @@
     <integer-array name="pod_thumbnails">
         <item>@drawable/philosophise_this_thumbnail</item>
     </integer-array>
-
-
 </resources>
