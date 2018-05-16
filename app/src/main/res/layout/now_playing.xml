@@ -4,13 +4,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@color/textIcons">
 
     <ImageButton
         android:id="@+id/now_playing_collapse_button"
         android:layout_width="@dimen/back_button_width"
         android:layout_height="@dimen/back_button_height"
-        android:background="@drawable/ic_action_slide_down" />
+        android:background="@drawable/ic_action_slide_down"
+        android:backgroundTint="@color/primaryText"/>
 
     <ImageView
         android:id="@+id/nowPlaying_podThumbnail"
@@ -20,7 +22,7 @@
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="@dimen/seekbar_height"
-        android:layout_margin="@dimen/layout_divider"/>/>
+        android:layout_margin="@dimen/layout_divider" />
 
     <TextView
         android:id="@+id/now_playing_title"
@@ -30,14 +32,16 @@
         android:layout_marginLeft="@dimen/layout_divider_large"
         android:layout_marginRight="@dimen/layout_divider_large"
         android:layout_marginBottom="@dimen/layout_divider"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textColor="@color/primaryText"/>
 
     <TextView
         android:id="@+id/now_playing_podTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/text_size"
-        android:layout_margin="@dimen/layout_divider"/>/>
+        android:layout_margin="@dimen/layout_divider"
+        android:textColor="@color/secondaryText"/>
 
     <LinearLayout
         android:layout_gravity="center"
@@ -49,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_action_replay"
+            android:backgroundTint="@color/primaryText"
             android:layout_margin="@dimen/layout_divider"/>/>
         <ImageButton
             android:layout_width="@dimen/play_button"
@@ -56,6 +61,7 @@
             android:background="@drawable/ic_action_play"
             android:layout_marginRight="@dimen/layout_divider"
             android:layout_marginTop="@dimen/layout_divider"
+            android:backgroundTint="@color/primaryText"
             android:layout_marginBottom="@dimen/layout_divider"/>
         <ImageButton
             android:layout_width="wrap_content"
@@ -63,6 +69,7 @@
             android:background="@drawable/ic_action_forward"
             android:layout_marginRight="@dimen/layout_divider"
             android:layout_marginTop="@dimen/layout_divider"
+            android:backgroundTint="@color/primaryText"
             android:layout_marginBottom="@dimen/layout_divider"/>
     </LinearLayout>
 

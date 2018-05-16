@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/header_margin"
             android:text="@string/header_title"
-            android:textColor="@android:color/white"
+            android:textColor="@color/textIcons"
             android:textSize="@dimen/header_font"
             />
         <ImageView
