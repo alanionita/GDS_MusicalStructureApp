@@ -29,6 +29,7 @@ This project is about combining various ideas and skills we’ve been practicing
 * Creating custom Java classes
 * Creating OnClickListeners through Java code
 * using Intents to open new activities and move data through the app
+* using Android Drawable Importer plugin to create multi res versions of drawables
 
 ### Extra challenges
 
